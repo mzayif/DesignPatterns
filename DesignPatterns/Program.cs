@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.FactoryDesignPattern;
+using DesignPatterns.SingletonDesignPattern;
 
 namespace DesignPatterns;
 

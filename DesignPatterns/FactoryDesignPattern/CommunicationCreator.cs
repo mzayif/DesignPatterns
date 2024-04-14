@@ -6,8 +6,8 @@ public class CommunicationCreator
     /// <summary>
     /// Factory design Pattern de amaç bir İnterface veya Abstrac class üzerinden bütün ortak işlemleri karşılayabilecek metotlar oluşturulur.
     /// Bu örneğimizde <see cref="ICommunication"/> interface i oluşturulmuş ve bu sınıfta  bulunan <see cref="ICommunication.ContactUs"/> metodu kullanılması amaçlanmıştır.
-    /// Bu metot <see cref="CommunicationType"/> iletişim tipine göre işlem yapılması amaçlanmıştır.
-    /// Burada belirtilen iletişim tipine uygun olan sınıf oluşturularak geri döndürülür. ve o sınıftaki <see cref="ICommunication.ContactUs"/>  metodu aracılığı ile türe uygun olarak işlem yapılması sağlanır.
+    /// Bu metot <see cref="CommunicationType"/> iletişim tipine göre işlem yapılması amaçlanmıştır.<br></br><br></br>
+    /// Burada belirtilen iletişim tipine uygun olan sınıf oluşturularak geri döndürülü ve o sınıftaki <see cref="ICommunication.ContactUs"/>  metodu aracılığı ile türe uygun olarak işlem yapılması sağlanır.
     /// </summary>
     /// <param name="communicationType"></param>
     /// <returns></returns>
