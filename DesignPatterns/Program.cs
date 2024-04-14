@@ -1,4 +1,5 @@
-﻿using DesignPatterns.FactoryDesignPattern;
+﻿using DesignPatterns.DependencyInjectionDesignPattern;
+using DesignPatterns.FactoryDesignPattern;
 using DesignPatterns.SingletonDesignPattern;
 
 namespace DesignPatterns;
@@ -16,12 +17,12 @@ internal class Program
 
         var singleton2 = Singleton.NesneVer();
         Console.WriteLine($"{singleton2.X} + {singleton2.Y} = {singleton2.X + singleton2.Y}");
-        
-        #endregion
 
+        #endregion
 
         #region Factory DesignPatterns
 
+        Console.WriteLine("===============   Factory DesignPatterns  ==================");
         var creator = new CommunicationCreator();
         var communication = creator.FactoryMethod(CommunicationType.Address);
         communication.ContactUs();
@@ -34,7 +35,17 @@ internal class Program
 
         #endregion
 
+        #region DependencyInjection Design Pattern
+        Console.WriteLine("===============   DependencyInjection Design Pattern  ==================");
+        var car = new Vehicle(new Car());
+        car.Drive();
+        var bus = new Vehicle(new Bus());
+        bus.Drive();
+        var motorCycle = new Vehicle(new Motorcycle());
+        motorCycle.Drive();
 
+
+        #endregion
 
         Console.ReadLine();
     }
