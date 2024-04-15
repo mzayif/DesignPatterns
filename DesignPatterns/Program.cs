@@ -1,6 +1,7 @@
 ﻿using DesignPatterns.DependencyInjectionDesignPattern;
 using DesignPatterns.FactoryDesignPattern;
 using DesignPatterns.SingletonDesignPattern;
+using DesignPatterns.StrategyDesignPattern;
 
 namespace DesignPatterns;
 
@@ -47,6 +48,14 @@ internal class Program
 
         #endregion
 
+        #region Strategy Design Pattern
+
+        Console.WriteLine("===============   Strategy Design Pattern  ==================");
+        var produce1 = new OpelCarProduce(new MassProduce());
+        var produce2 = new OpelCarProduce(new PrivateProduce());
+        var produce3 = new OpelCarProduce(new ProductionToOrder());
+
+        #endregion
         Console.ReadLine();
     }
 }
