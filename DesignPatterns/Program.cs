@@ -1,5 +1,6 @@
 ﻿using DesignPatterns.DependencyInjectionDesignPattern;
 using DesignPatterns.FactoryDesignPattern;
+using DesignPatterns.ObserverDesignPattern;
 using DesignPatterns.SingletonDesignPattern;
 using DesignPatterns.StrategyDesignPattern;
 
@@ -56,6 +57,29 @@ internal class Program
         var produce3 = new OpelCarProduce(new ProductionToOrder());
 
         #endregion
+
+        #region Observer Design Pattern
+
+        Console.WriteLine("===============   Observer Design Pattern  ==================");
+
+        var student = new Student()
+        {
+            Name = "Ahmet",
+            Surname = "Yılmaz",
+            Address = "Test",
+            Class = 5
+        };
+
+        student.AddObserver(new FatherObserver());
+        student.AddObserver(new MotherObserver());
+        student.AddObserver(new TeacherObserver());
+
+   
+        student.IsSkipSchool = true;
+
+        #endregion
+
+
         Console.ReadLine();
     }
 }
